@@ -1,0 +1,33 @@
+# macOS system files
+.DS_Store
+.idea
+
+# Logs
+logs/
+*.log
+
+# Frontend build artifacts and dependencies
+frontend/dist/
+frontend/node_modules/
+
+# Ignore specific frontend files if necessary (usually handled by frontend/.gitignore)
+# e.g. frontend/.env
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE/Editor specific
+*.swp
+*.swo
+.vscode/ # User settings for vscode should generally not be committed unless specific project settings
+
+# Downloaded files or large binaries (if any, usually project specific)
+# *.zip
+# *.tar.gz
+
+# Other sensitive data if any (beyond frontend/.env which should be in frontend/.gitignore)
+# .env.local
+# .env.*.local
+# !.env.example
