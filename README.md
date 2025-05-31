@@ -1,1 +1,1 @@
-# Openllmlive2d
+# Open-LLM-VTuber Mobile Webapp
