@@ -77,6 +77,7 @@ body {
   border-top: 1px solid #ddd;
 }
 
+
 /* Chat area styling */
 .chat-area {
   display: flex;
@@ -169,6 +170,7 @@ body {
 
 
 /* Settings panel styling from previous step - ensure it's still here */
+
 .settings-panel div {
   margin-bottom: 0.75rem;
 }
@@ -190,10 +192,12 @@ body {
 
 /* Basic Mobile Responsiveness */
 @media (min-width: 768px) {
+
   .chat-message.chat-user,
   .chat-message.chat-assistant {
     max-width: 60%; /* Slightly less wide on larger screens */
   }
+
   .main-content {
     flex-direction: row; /* Side-by-side on larger screens */
   }

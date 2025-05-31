@@ -1,3 +1,4 @@
+
 # Open-LLM-VTuber (Client-Side Edition)
 
 This project is a client-side web application that allows you to interact with an AI, powered by OpenRouter, visualized with a Live2D avatar loaded from your local device. It's designed to run directly in your browser without needing a separate backend server.
@@ -88,6 +89,7 @@ All configuration is done directly within the web application's UI:
 
 This project is likely based on the original Open-LLM-VTuber project. Please refer to the original license if applicable, or assume MIT unless a `LICENSE` file in this repository states otherwise. (If a LICENSE file was part of the scaffolding, its original terms apply).
 
----
+
 
 This README provides guidance for the client-side version of Open-LLM-VTuber.
+# Open-LLM-VTuber Mobile Webapp

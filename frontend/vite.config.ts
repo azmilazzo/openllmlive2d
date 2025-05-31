@@ -32,16 +32,25 @@ eb/dist/*.wasm')),
   ],
   resolve: {
     alias: {
+
       '@': path.resolve(__dirname, './src'), // Adjusted for web structure
     },
   },
   root: 'src', // Adjusted for web structure
   publicDir: '../public', // Adjusted relative to new root, or use path.join(__dirname, 'public')
+
+      '@': path.resolve(__dirname, './src/renderer/src'),
+    },
+  },
+  root: path.join(__dirname, 'src/renderer'),
+  publicDir: path.join(__dirname, 'src/renderer/public'),
+
   base: './',
   server: {
     port: 3000,
   },
   build: {
+
     outDir: path.join(__dirname, '..', outDir), // Adjusted for new root, outDir is relative to project root
     emptyOutDir: true,
     assetsDir: 'assets', // This will be inside outDir
@@ -103,11 +112,18 @@ const correctedCreateConfig = async (finalOutDir: string) => ({
   },
   build: {
     outDir: finalOutDir, // This is now an absolute or project-root-relative path
+
+    outDir: path.join(__dirname, outDir),
+
     emptyOutDir: true,
     assetsDir: 'assets',
     rollupOptions: {
       input: {
+
         main: path.resolve(__dirname, 'public/index.html'), // Entry HTML is in frontend/public
+
+        main: path.join(__dirname, 'src/renderer/index.html'),
+
       },
     },
   },
@@ -118,8 +134,14 @@ const correctedCreateConfig = async (finalOutDir: string) => ({
 
 export default defineConfig(async ({ mode }) => {
   if (mode === 'web') {
+
     return correctedCreateConfig(path.resolve(__dirname, 'dist/web'));
   }
   // Default build (e.g. `vite build` without specific mode)
   return correctedCreateConfig(path.resolve(__dirname, 'dist'));
+
+    return createConfig('dist/web');
+  }
+  return createConfig('dist/renderer');
+
 });
